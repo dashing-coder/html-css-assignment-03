@@ -16,22 +16,31 @@
         display: -ms-flexbox;
         display: flex;
       }
-      .parentDiv {
+      .circle {
         padding: 20px 0;
         flex-wrap: wrap;
         vertical-align: middle;
       }
-      .parentDiv div {
-        width: 35vw;
-        height: 35vw;
+      .green, .red {
+        width: 30vw;
+        height: 30vw;
         margin: auto 10px;
         border-radius: 50%;
         flex-grow:1;
-        display: table-cell;
+        display: inline-block;
         vertical-align: middle;
+        position: relative;
       }        
-      .green {
+      .green {        
         border: 3vw solid #348D24;
+      }
+      .text-middle {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
       }
       .green h1, .green h3 {
         color: #348D24;
@@ -45,7 +54,7 @@
         font-size: 2vw;
         letter-spacing: 2px;
       }
-      .red {        
+      .red {
         border: 3vw solid #8F1E03;
       }
       .red h1, .red h3 {
@@ -58,16 +67,23 @@
 	
 
 <div class="circle-resposive">
-  <div class="parentDiv">
+  <div class="circle">
+
     <div class="green">
+      <div class="text-middle">
         <h3>Success</h3>
         <h1>90%</h1>
+      </div>        
     </div>
 
+
     <div class="red">
-      <h3>Success</h3>
-        <h1>10%</h1>
+      <div class="text-middle">
+        <h3>Success</h3>
+          <h1>10%</h1>
+      </div>
     </div>
+
   </div>
 </div>
   </body>
